@@ -34,6 +34,8 @@ class MyAppState extends State<WeatherPage> {
   }
 
    @override
+
+
   Widget build(BuildContext context) {
     return Scaffold(
           backgroundColor: Colors.white,
@@ -64,7 +66,7 @@ class MyAppState extends State<WeatherPage> {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          height: 200.0,
+                          height: 250.0,
                           child: forecastData != null ? ListView.builder(
                               itemCount: forecastData.list.length,
                               scrollDirection: Axis.horizontal,
@@ -112,23 +114,7 @@ class MyAppState extends State<WeatherPage> {
                               ),),
                               trailing: Text(weatherData.windspeed != null ? weatherData.windspeed.toString() + " mph" : "Loading"),
                             ),
-                            /*ListTile(
-                              leading: FaIcon(FontAwesomeIcons.sun),
-                              title: Text("Sunrise", style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 20
-                              ),),
-                              trailing: Text(weatherData.sunRise != null ? weatherData.sunRise*1000 : "Loading"),
-                            ),
-                            ListTile(
-                              leading: FaIcon(FontAwesomeIcons.moon),
-                              title: Text("Sunset", style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 20
-                              ),),
-                              trailing: Text(weatherData.sunSet != null ? weatherData.sunSet*1000 : "Loading"),
-                            ),*/
-
-
-                          ],
+                            ],
                         )
                       )
                     )
@@ -137,6 +123,8 @@ class MyAppState extends State<WeatherPage> {
           )
       );
   }
+
+
 
   loadWeather() async {
     setState(() {

@@ -32,7 +32,6 @@ class WeatherData {
 
   factory WeatherData.fromJson(Map<String, dynamic> json) {
     return  WeatherData(
-      //date: new DateTime.fromMillisecondsSinceEpoch(json['dt'] * 1000, isUtc: false),
       name: json['name'],
       temp: json['main']['temp'].round(),
       main: json['weather'][0]['main'],
@@ -45,8 +44,6 @@ class WeatherData {
       sunRise: json['sys']['sunrise'],
       sunSet: json['sys']['sunset'],
 
-
-      //icon: "http://openweathermap.org/img/w/" + json['weather']['icon'] +".png",
     );
 
   }

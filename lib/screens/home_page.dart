@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         actions: <Widget>[
           IconButton(
               padding: new EdgeInsets.all(0),
-              icon: Text ('${weather.temp.toString()}°F', style: new TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w300)), onPressed: null),
+              icon: Text ('${weather.temp.toString()} °F', style: new TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w300)), onPressed: null),
           //Text('${weather.temp.toString()}°F', style: new TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.w300)),
           IconButton(
             padding: new EdgeInsets.all(0),
